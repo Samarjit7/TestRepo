@@ -1,0 +1,42 @@
+mkdir TestWebApi
+
+dotnet new sln
+dotnet new webapi -n API -controllers
+dotnet new classlib -n Domain
+dotnet new classlib -n Application
+dotnet new classlib -n Persistence
+
+dotnet sln add API
+dotnet sln add Domain
+dotnet sln add Application
+dotnet sln add Persistence
+
+Add reference:
+API: Application
+Application: Domain, Persistence
+Persistence: Domain
+
+
+Download Nuget Packages:
+Microsoft.EntityFrameworkCore.Design (API)
+Microsoft.EntityFrameworkCore.SQLite (Persistence)
+
+Download dotnet-ef from nuget.org: 
+dotnet tool install --global dotnet-ef --version 9.0.5
+
+Add Migration: 
+dotnet ef migrations add InitialCreate -p Persistence -s API
+
+Create Database: 
+dotnet ef database update -p Persistence -s API
+
+Drop Database: 
+dotnet ef database drop -p Persistence -s API
+
+
+Create database using code: dotnet watch
+
+dotnet run
+dotnet build
+dotnet watch
+
