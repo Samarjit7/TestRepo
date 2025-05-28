@@ -27,16 +27,23 @@ dotnet tool install --global dotnet-ef --version 9.0.5
 Add Migration: 
 dotnet ef migrations add InitialCreate -p Persistence -s API
 
+Database first approach:
 Create Database: 
 dotnet ef database update -p Persistence -s API
 
 Drop Database: 
 dotnet ef database drop -p Persistence -s API
 
-
+Code first approach:
 Create database using code: dotnet watch
 
 dotnet run
 dotnet build
 dotnet watch
+
+configure git
+git remote add origin https://github.com/Samarjit7/MovieStore.git
+
+configure vite
+npm create vite@latest
 
