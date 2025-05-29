@@ -41,13 +41,14 @@ dotnet run
 dotnet build
 dotnet watch
 
-configure git
+Configure git: 
 git remote add origin https://github.com/Samarjit7/MovieStore.git
 
-configure vite
-mkdir UI
-cd UI
+Configure Vite: 
 npm create vite@latest
+
+Create folder for UI components: (UI)
+cd UI
 npm install
 npm run dev
 
