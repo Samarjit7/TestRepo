@@ -45,6 +45,8 @@ configure git
 git remote add origin https://github.com/Samarjit7/MovieStore.git
 
 configure vite
+mkdir UI
+cd UI
 npm create vite@latest
 npm install
 npm run dev
