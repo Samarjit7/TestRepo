@@ -58,3 +58,7 @@ install UI, fonts, icons.
 Axios:
 npm install axios
 
+To fix https connection error in local: 
+dotnet dev-certs https --trust   
+
+
