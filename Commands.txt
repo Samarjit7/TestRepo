@@ -55,10 +55,16 @@ npm run dev
 Material UI:
 install UI, fonts, icons.
 
-Axios:
+Install Axios:
 npm install axios
 
 To fix https connection error in local: 
 dotnet dev-certs https --trust   
+
+Install React Query:
+npm i @tanstack/react-query
+
+Install React dev tools:
+npm i @tanstack/react-query-devtools
 
 
